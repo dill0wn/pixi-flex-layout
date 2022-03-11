@@ -26,6 +26,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
+    "@types/offscreencanvas": "^2019.6.4",
     "pixi.js": "^6.2.2"
   },
   "devDependencies": {
