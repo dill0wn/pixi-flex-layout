@@ -1,4 +1,4 @@
-import * as Yoga from "yoga-layout-prebuilt-low-memory";
+import * as Yoga from "yoga-layout-prebuilt";
 import * as PIXI from "pixi.js";
 import { YogaConstants } from "./YogaContants";
 import { YogaLayoutConfig } from "./YogaLayoutConfig";

@@ -28,13 +28,13 @@
   "devDependencies": {
     "@types/offscreencanvas": "^2019.6.4",
     "@types/yoga-layout": "^1.9.1",
-    "javascript-editor": "^1.0.3",
-    "pixi.js": "^6.2.2",
+    "javascript-editor": "https://github.com/dill0wn/javascript-editor",
     "parcel-bundler": "^1.12.4",
+    "pixi.js": "^6.2.2",
     "typedoc": "^0.17.3",
     "typescript": "^4.6.2"
   },
   "dependencies": {
-    "yoga-layout-prebuilt-low-memory": "*"
+    "yoga-layout-prebuilt": "^1.10.0"
   }
 }
