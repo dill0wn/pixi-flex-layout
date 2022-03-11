@@ -1,7 +1,7 @@
+import * as PIXI from "pixi.js";
 import { YogaLayout } from "./YogaLayout";
-import Container = PIXI.Container;
 
-declare module "pixi.js" {
+declare module "@pixi/display" {
     export interface Container {
         /**
          * True to enable flex for direct children. See also: flexRecursive
@@ -16,7 +16,7 @@ declare module "pixi.js" {
 
 }
 
-export function applyContainerPolyfill(proto: any = Container.prototype) {
+export function applyContainerPolyfill(proto: any = PIXI.Container.prototype) {
 
     Object.defineProperty(proto, "flex", {
         get(): boolean {

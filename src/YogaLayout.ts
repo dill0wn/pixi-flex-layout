@@ -4,7 +4,6 @@ import { YogaConstants } from "./YogaContants";
 import { YogaLayoutConfig } from "./YogaLayoutConfig";
 import { yogaAnimationManager } from "./YogaAnimationManager";
 import YogaEdges = YogaConstants.YogaEdges;
-import DisplayObject = PIXI.DisplayObject;
 import ComputedLayout = YogaConstants.ComputedLayout;
 import FlexDirection = YogaConstants.FlexDirection;
 import JustifyContent = YogaConstants.JustifyContent;
@@ -51,7 +50,7 @@ export class YogaLayout {
     public static readonly LAYOUT_UPDATED_EVENT = "LAYOUT_UPDATED_EVENT";
     public static readonly AFTER_LAYOUT_UPDATED_EVENT = "AFTER_LAYOUT_UPDATED_EVENT";
     public static readonly NEED_LAYOUT_UPDATE = "NEED_LAYOUT_UPDATE";
-    public readonly target: DisplayObject;
+    public readonly target: PIXI.DisplayObject;
     public readonly node: Yoga.YogaNode;
     public children: YogaLayout[] = [];
     public parent?: YogaLayout;
@@ -101,7 +100,7 @@ export class YogaLayout {
     private _marginTop: number = 0;
     private _marginLeft: number = 0;
 
-    constructor(pixiObject: DisplayObject = new DisplayObject()) {
+    constructor(pixiObject: PIXI.DisplayObject = new PIXI.Container()) {
         this.node = Yoga.Node.create();
         pixiObject.__hasYoga = true;
         this.fillDefaults();
